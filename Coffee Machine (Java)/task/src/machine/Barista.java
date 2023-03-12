@@ -20,8 +20,9 @@ class Barista extends MachineState {
                 case 1 -> drink = IngredientsNeeded.ESPRESSO;
                 case 2 -> drink = IngredientsNeeded.LATTE;
                 case 3 -> drink = IngredientsNeeded.CAPPUCCINO;
+                default -> System.out.println("Not a valid option!\n");
             }
-        } catch (NumberFormatException ignored) {}
+        } catch (NumberFormatException ignored) {System.out.println("Not a valid option!\n");}
         return drink;
     }
 
